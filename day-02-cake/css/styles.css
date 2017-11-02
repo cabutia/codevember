@@ -1,0 +1,55 @@
+body
+{
+    background: #ccc;
+    transition: background 1s ease;
+    width: 100vw;
+    overflow-x: hidden
+}
+
+#bsod
+{
+    position: absolute;
+    display: none;
+    top: 96px;
+    left: 0;
+    width: 100vw;
+    overflow: hidden !important;
+    padding: 1vw;
+    height: 100vh;
+    background: #0000ff;
+    color: #ffffff;
+    font-size: 18pt;
+    font-family: 'VT323'
+}
+
+#bsod h2
+{
+    font-size: 28pt;
+    font-weight: 400;
+    margin: 0;
+}
+
+#bsod h3
+{
+    font-size: 24pt;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+#bsod h2 a, #bsod h3 a
+{
+    color: white;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    #bsod { font-size: 16pt }
+    #bsod h2 { font-size: 22pt }
+    #bsod h3 { font-size: 20pt }
+}
+
+@media screen and (max-width: 600px){
+    #bsod { font-size: 18pt }
+    #bsod h2 { font-size: 22pt }
+    #bsod h3 { font-size: 20pt }
+}
