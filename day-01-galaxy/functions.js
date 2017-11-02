@@ -26,7 +26,7 @@ generateNewStars = (max) => {
             red: Math.round(random(127, 255)),
             green: Math.round(random(60, 255)),
             blue: Math.round(random(240, 255)),
-            alpha: random(0,1),
+            alpha: random(0.5,1),
             speed: random(0.2,1.5),
             speedX: 0,
             get color() {

@@ -49,27 +49,39 @@ window.addEventListener('click', e => {
             stars[i].y > (position.y - size / 2) &&
             stars[i].y < (position.y + size / 2))
         {
-            stars[i].speed = stars[i].speed * 2;
+            if (stars[i].x > position.x && stars[i].y < position.y) {           // 0-90
+                stars[i].speedX = stars[i].speedX + random(-1,4)
+                stars[i].speed = stars[i].speed + random(1,-4)
+            } else if (stars[i].x > position.x && stars[i].y > position.y) {    // 90-180
+                stars[i].speedX = stars[i].speedX + random(-1,4)
+                stars[i].speed = stars[i].speed + random(-1,4)
+            } else if (stars[i].x < position.x && stars[i].y > position.y) {    // 180-270
+                stars[i].speedX = stars[i].speedX + random(1,-4)
+                stars[i].speed = stars[i].speed + random(-1,4)
+            } else if (stars[i].x < position.x && stars[i].y < position.y) {    // 270-360
+                stars[i].speedX = stars[i].speedX + random(1,-4)
+                stars[i].speed = stars[i].speed + random(1,-4)
+            }
         }
     }
 })
 
 window.addEventListener('contextmenu', e => {
+    e.preventDefault()
     let position = {
         x: e.clientX,
         y: (e.clientY - canvas.offsetTop)
     }
-    e.preventDefault()
     let size = 150 / 2
     for (var i = 0; i < stars.length; i++) {
-        if (stars[i].x > position.x - size && stars[i].x < position.x + size && stars[i].y > position.y - size && stars[i].y > position.y - size ) {
+        if (stars[i].x > position.x - size && stars[i].x < position.x + size && stars[i].y < position.y + size && stars[i].y > position.y - size ) {
             if (stars[i].x > position.x - size && stars[i].x < position.x && stars[i].y > position.y - size && stars[i].y < position.y + size) {
-                stars[i].speedX = stars[i].speedX - 1;
+                stars[i].speedX = stars[i].speedX - random(2.4, 3.5);
             }
             if (stars[i].x < position.x + size && stars[i].x > position.x && stars[i].y > position.y - size && stars[i].y < position.y + size) {
-                stars[i].speedX = stars[i].speedX + 1;
+                stars[i].speedX = stars[i].speedX + random(2.4, 3.5);
             }
-            stars[i].speed = stars[i].speed + 1;
+            stars[i].speed = stars[i].speed + random(2,7);
         }
 
         // if (stars[i].x > (position.x - size / 2) &&
