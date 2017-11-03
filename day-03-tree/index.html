@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>#Codevember - Day 03</title>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/animations.css">
+    </head>
+    <body>
+        <header>
+            <h1 onclick="../">Tree</a></h1>
+            <h2>Day 03</h2>
+            <h2 class="codevember">#Codevember</h2>
+        </header>
+
+        <section class="challenge">
+            <h1 class="cv" id="title">#Codevember</h1>
+            <h2 class="cv" id="day">Day 03</h2>
+            <div class="moon-sun-wrapper">
+                <div class="moon">
+                    <div class="crater crater-1"></div>
+                    <div class="crater crater-2"></div>
+                    <div class="crater crater-3"></div>
+                    <div class="crater crater-4"></div>
+                </div>
+                <div class="sun"></div>
+            </div>
+            <div class="mountains-wrapper">
+                <div class="mountain mountain-1"> <!-- Left mountain -->
+                </div>
+                <div class="tree tree-1"></div>
+                <div class="tree tree-2"></div>
+                <div class="tree tree-3"></div>
+                <div class="tree tree-4"></div>
+                <div class="mountain mountain-2"> <!-- Right mountain -->
+
+                </div>
+                <div class="mountain mountain-3"> <!-- Center mountain -->
+
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            let m1 = document.querySelector('.mountain-1')
+            let m2 = document.querySelector('.mountain-2')
+            let m3 = document.querySelector('.mountain-3')
+            let t1 = document.querySelector('.tree-1')
+            let t2 = document.querySelector('.tree-2')
+            let t3 = document.querySelector('.tree-3')
+            let t4 = document.querySelector('.tree-4')
+            let h1 = document.querySelector('#title')
+            let h2 = document.querySelector('#day')
+            let time = 0
+            setInterval(() => {
+                console.log(time);
+                if (time === 1) { m1.className += ' visible' }
+                if (time === 3) { m2.className += ' visible' }
+                if (time === 4) { m3.className += ' visible' }
+                if (time === 5) { t1.className += ' visible' }
+                if (time === 6) { t2.className += ' visible' }
+                if (time === 7) { t3.className += ' visible' }
+                if (time === 8) { t4.className += ' visible'; h1.className += ' visible' }
+                if (time === 9) { h2.className += ' visible' }
+                time++
+            }, 1000)
+        </script>
+    </body>
+</html>

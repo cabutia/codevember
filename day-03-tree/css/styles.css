@@ -1,0 +1,262 @@
+@media screen and (max-width: 600px) {
+    .moon-sun-wrapper { height: calc(200vh - 152px) }
+    .sun { margin-top: calc(200vh - 152px - 10vw) !important }
+
+    .mountain-1 { bottom: -30vw !important }
+    .mountain-2 { bottom: -35vw !important }
+    .mountain-3 { bottom: -25vw !important }
+
+    .tree-1 { bottom: 5vw !important }
+    .tree-2 { bottom: 6vw !important }
+    .tree-3 { bottom: .7vw !important }
+    .tree-4 { bottom: 9vw !important }
+
+    h1.cv { font-size: 24pt !important }
+    h2.cv { font-size: 18pt !important }
+}
+
+body
+{
+    background: #2a2a3c;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden !important;
+    animation: skyBackground 15s linear infinite;
+}
+
+.mountain.visible { transform: rotate(45deg) translateY(0) }
+.tree.visible { transform: rotate(0deg) translateY(0) scale(1); opacity: 1 }
+h1.cv.visible { top: 20vh; transform: rotate(0deg); opacity: 1 }
+h2.cv.visible { top: calc(20vh + 24pt + 30px); transform: rotate(0deg); opacity: 1 }
+
+.moon-sun-wrapper
+{
+    bottom: -100%;
+    width: 100vh;
+    height: calc(200vh - 192px);
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    left: calc((100vw - 100vh) / 2);
+
+    animation: translation 15s linear infinite;
+}
+
+.moon
+{
+    width: 10vw;
+    height: 10vw;
+    background-color: #d3d3dd;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -8px -5px 0px rgba(0,0,0,.7) inset, 0px 0px 30px rgba(255,255,255,.5);
+    border: 3px solid transparent;
+    animation: rotation 15s linear infinite;
+}
+
+.sun
+{
+    width: 10vw;
+    height: 10vw;
+    margin-left: -10vw;
+    margin-top: calc(200vh - 192px - 10vw);
+    background-color: #fff2ad;
+    border-radius: 50%;
+    position: relative;
+    border: 3px solid transparent;
+    box-shadow: 0px 0px 30px #fff;
+
+    /*transform: rotate(-45deg);*/
+}
+
+.moon .crater
+{
+    position: absolute;
+    background: #c0c0c7;
+    border-radius: 50%;
+    box-shadow: 2px 1px 0px rgba(0,0,0,.7) inset;
+}
+
+.moon .crater-1
+{
+    top: 50%;
+    left: 10%;
+    width: 15%;
+    height: 15%;
+}
+
+.moon .crater-2
+{
+    top: 30%;
+    left: 30%;
+    width: 8%;
+    height: 8%;
+}
+
+.moon .crater-3
+{
+    top: 60%;
+    left: 55%;
+    width: 20%;
+    height: 20%;
+}
+
+.moon .crater-4
+{
+    top: 15%;
+    right: 30%;
+    width: 12%;
+    height: 12%;
+}
+
+.mountains-wrapper
+{
+    width: 100vw;
+    height: calc(100vh - 96px);
+    position: relative;
+}
+
+.mountain
+{
+    position: absolute;
+    background-color: #805a4a;
+    border-radius: 1vw 0 0 0;
+    transition: all 1s ease-in-out;
+
+    animation: mountainColor 15s linear infinite;
+}
+
+.mountain-1
+{
+    bottom: -20vw;
+    left: 20vw;
+    height: 30vw;
+    width: 30vw;
+    transform: rotate(45deg) translateY(0%);
+    transform: rotate(70deg) translateY(150%);
+}
+
+.mountain-2
+{
+    bottom: -25vw;
+    left: 55vw;
+    height: 30vw;
+    width: 30vw;
+    transform: rotate(45deg) translateY(0%);
+    transform: rotate(30deg) translateY(150%);
+}
+
+.mountain-3
+{
+    bottom: -15vw;
+    left: 35vw;
+    height: 30vw;
+    width: 30vw;
+    transform: rotate(45deg) translateY(0%);
+    transform: rotate(-5deg) translateY(150%);
+}
+
+.tree
+{
+    position: absolute;
+    z-index: -1;
+    background-color: #403223;
+    box-shadow: 0px 0px 2px rgba(0,0,0,.2) inset;
+    opacity: 0;
+}
+.tree::after
+{
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    width: 2vw;
+    height: 2vw;
+    left: -.6vw;
+    transform: rotate(45deg);
+    border-radius: 0 50% 50% 50%;
+    animation: treeCupColor 15s linear infinite;
+}
+
+.tree::before
+{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    left: -.8vw;
+    transform: rotate(45deg);
+    border-radius: 0 50% 50% 50%;
+    animation: treeCupColor 15s linear infinite;
+}
+
+.tree-1
+{
+    bottom: 14.6vw;
+    left: 35vw;
+    width: .9vw;
+    height: 3vw;
+    transform: translateY(200%) rotate(-30deg) scale(.6);
+    transition: all 2s ease;
+}
+
+.tree-2
+{
+    bottom: 15.8vw;
+    left: 45vw;
+    width: .9vw;
+    height: 3vw;
+    transform: translateY(200%) rotate(-30deg) scale(.6);
+    transition: all 2s ease;
+}
+
+.tree-3
+{
+    bottom: 9.6vw;
+    left: 70vw;
+    width: .9vw;
+    height: 3vw;
+    transform: translateY(200%) rotate(-30deg) scale(.6);
+    transition: all 2s ease;
+}
+
+.tree-4
+{
+    bottom: 18.5vw;
+    left: 51.2vw;
+    width: .9vw;
+    height: 3vw;
+    transform: translateY(200%) rotate(-30deg) scale(.6);
+    transition: all 2s ease;
+}
+
+h1.cv
+{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    font-size: 70pt;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: all 3s ease-in-out;
+}
+
+h2.cv
+{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    font-size: 30pt;
+    text-transform: uppercase;
+    left: 0;
+    text-align: center;
+    color: rgba(0,0,0,.7);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: all 3s ease-in-out;
+}
