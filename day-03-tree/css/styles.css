@@ -13,6 +13,7 @@
 
     h1.cv { font-size: 24pt !important }
     h2.cv { font-size: 18pt !important }
+    h2.cv.visible { top: calc(20vh + 24pt + 30px); transform: rotate(0deg); opacity: 1 }
 }
 
 body
@@ -27,7 +28,7 @@ body
 .mountain.visible { transform: rotate(45deg) translateY(0) }
 .tree.visible { transform: rotate(0deg) translateY(0) scale(1); opacity: 1 }
 h1.cv.visible { top: 20vh; transform: rotate(0deg); opacity: 1 }
-h2.cv.visible { top: calc(20vh + 24pt + 30px); transform: rotate(0deg); opacity: 1 }
+h2.cv.visible { top: calc(20vh + 70pt + 30px); transform: rotate(0deg); opacity: 1 }
 
 .moon-sun-wrapper
 {
